@@ -9,7 +9,10 @@ import java.io.IOException;
  */
 public class ShellMain {
     public static void main(String[] args) {
-        String shell="cat D:\\qunar\\qunar-homework\\target\\classes\\doc\\attachments\\Question3\\sdxl.txt | gerp 水 | wc -l";
+        String shell="cat D:\\qunar\\qunar-homework\\target\\classes\\doc\\attachments\\Question3\\sdxl.txt &&" +
+                "cat D:\\qunar\\qunar-homework\\target\\classes\\doc\\attachments\\Question3\\sdxl.txt | grep 水 &&" +
+                "wc -l D:\\qunar\\qunar-homework\\target\\classes\\doc\\attachments\\Question3\\sdxl.txt &&" +
+                "cat D:\\qunar\\qunar-homework\\target\\classes\\doc\\attachments\\Question3\\sdxl.txt | grep 水 | wc -l";
         try {
             new ShellParse().run(shell);
         } catch (IOException e) {

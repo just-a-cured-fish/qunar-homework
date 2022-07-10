@@ -10,9 +10,9 @@ import java.util.List;
  * @description
  * @time 2022/7/2 17:12
  */
-public class CharOrderDescServiceImpl extends AbstractOrderService{
+public class CharOrderDescServiceImpl extends AbstractOrderService {
     public CharOrderDescServiceImpl(List<String> lines) {
         super(lines);
-        Collections.sort(lines,Ordering.natural().reverse());
+        Collections.sort(lines, Ordering.natural().reverse());
     }
 }

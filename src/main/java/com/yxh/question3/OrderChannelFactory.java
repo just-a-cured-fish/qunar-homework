@@ -5,9 +5,11 @@ import com.yxh.question3.impl.CharOrderDescServiceImpl;
 import com.yxh.question3.impl.CharOrderServiceImpl;
 import com.yxh.question3.impl.IndexOrderServiceImpl;
 import com.yxh.question3.impl.NatureOrderServiceImpl;
-import sun.security.util.ArrayUtil;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author yxh
@@ -29,7 +31,7 @@ public class OrderChannelFactory {
 
     //根据渠道类型构建短信渠道Service
     public OrderService buildService(String channelType) {
-        channelType=channelType.substring(channelType.indexOf(DecodeMain.TEMPLATE_FUNCTION_MARKER),channelType.indexOf(DecodeMain.TEMPLATE_PRE_MARKER));
+        channelType = channelType.substring(channelType.indexOf(DecodeMain.TEMPLATE_FUNCTION_MARKER), channelType.indexOf(DecodeMain.TEMPLATE_PRE_MARKER));
         return serviceMap.get(channelType);
     }
 }

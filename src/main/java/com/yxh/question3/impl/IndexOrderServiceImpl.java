@@ -11,15 +11,16 @@ import java.util.List;
  * @time 2022/7/2 16:27
  */
 public class IndexOrderServiceImpl extends AbstractOrderService {
-    LinkedHashMap<String,String> map;
+    LinkedHashMap<String, String> map;
+
     public IndexOrderServiceImpl(List<String> lines, LinkedHashMap<String, String> map) {
         super(lines);
-        this.map=map;
+        this.map = map;
     }
 
     @Override
     public String order(String s) {
-        s=s.substring(s.indexOf(DecodeMain.TEMPLATE_PRE_MARKER)+1,s.indexOf(DecodeMain.TEMPLATE_SUFFIX_MARKER));
+        s = s.substring(s.indexOf(DecodeMain.TEMPLATE_PRE_MARKER) + 1, s.indexOf(DecodeMain.TEMPLATE_SUFFIX_MARKER));
         return map.get(s);
     }
 }

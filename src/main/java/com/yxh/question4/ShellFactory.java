@@ -30,7 +30,7 @@ public class ShellFactory {
         serviceMap = new HashMap<String, ShellService>();
         serviceMap.put("cat", new CatShellServiceImpl());
         serviceMap.put("wc", new WcShellSeriveImpl());
-        serviceMap.put("gerp",new GrepShellServiceImpl());
+        serviceMap.put("grep",new GrepShellServiceImpl());
     }
 
     //根据渠道类型构建短信渠道Service

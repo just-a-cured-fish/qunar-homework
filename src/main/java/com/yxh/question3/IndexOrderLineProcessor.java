@@ -5,17 +5,14 @@ import com.google.common.collect.Iterables;
 import com.google.common.io.LineProcessor;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
 
 /**
  * @author yxh
  * @description
  * @time 2022/7/2 15:42
  */
-public class IndexOrderLineProcessor  implements LineProcessor<LinkedHashMap<String, String>> {
+public class IndexOrderLineProcessor implements LineProcessor<LinkedHashMap<String, String>> {
     private final Splitter SPLITTER = Splitter.onPattern("\\s+");
     private LinkedHashMap<String, String> indexOrderMap = new LinkedHashMap<>();
 
